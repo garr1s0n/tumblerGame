@@ -134,7 +134,7 @@ textarea {
 }
 
 /* Game */
-#gameArea { position: relative; width: 640px; height: 410px; margin: 0 auto; }
+#gameArea { position: relative; width: 640px; height: 410px; margin: 0 auto 2em; }
 #dialog { position: absolute; z-index: 1000; background: #fff; padding: 1em; width: 20em; left: 50%; margin-left: -10em; }
 #slotmachine { width: 84.375%; height: 87.805%; overflow: hidden; padding: 0; position: absolute; top: 6.1%; left: 7.8125%; }
 #slotArea { position: absolute; top: 0; left: 0; right: 0; height: 100%; }
