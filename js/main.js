@@ -186,7 +186,7 @@ function gameEnd() {
     fader('show');
 
     if (win == true || win == "true") {
-        endCopy = '<h2 class="heavy">Congrate, ' + results.name + '!</h2>'
+        endCopy = '<h2 class="heavy">Congrats, ' + results.name + '!</h2>'
             + '<p class="red bold">You just won ' + results.prize + '!</p>'
             + '<a href="javascript:void(0)" id="thanksBtn" class="button gameContinueBtn">Continue</a>';
     }
