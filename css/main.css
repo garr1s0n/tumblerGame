@@ -126,7 +126,34 @@ textarea {
     transition: max-height .35s ease-in;
 }
     .prizeHolder.active {
-        max-height: 9rem;
+        max-height: 31em;
+    }
+    @media screen and (min-width: 40em) {
+        .prizeHolder.active {
+            max-height: 17rem;
+        }
+    }
+
+.winImgPrev {
+    text-align: center;
+    margin: 0 auto 1em;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    max-height: 0;
+    transition: max-height .35s ease-in;
+}
+.winImgPrev.active {
+    max-height: 10em;
+}
+    .winImgPrev p {
+        font-size: 1.5rem;
+        margin: 0 0 .5em;
+    }
+    .winImgPreview {
+        width: 100px;
+        height: auto;
+        margin: 0 auto 1em;
+        border: 1px solid #000;
     }
 
 .game.container .row .column {

@@ -73,7 +73,31 @@ function goGame() {
 var setImages = 5; // Total Number of Images per Set
 var totSets = 25; // Total number of set repeats
 // var winImg = 5; // Single Winning image
-var winImg = Math.floor(Math.random() * (setImages - 1)) + 1; // Random Winning image from set 
+//var winImg = Math.floor(Math.random() * (setImages - 1)) + 1; // Random Winning image from set 
+var winImg; 
+
+var winImgSelect = '';
+function getWinImg() {
+    var winImgVal = document.getElementsByName('winImage');
+    var winImgHolder = document.getElementById('winImgPrev');
+    var winImgDisplay = document.getElementById('winImgPreview');
+
+    for (var i = 0; i < winImgVal.length; i++) {    
+        if (resultSelect == true) {
+            if (winImgVal[i].checked) {
+                winImg = winImgVal[i].value;
+                winImgDisplay.src = 'images/game/slotImg-' + winImgVal[i].value + '.jpg';
+                winImgHolder.classList.add('active');
+                break;
+            } else { 
+                var randWinImage = Math.floor(Math.random() * (setImages - 1)) + 1;
+                winImg = randWinImage;
+                winImgDisplay.src = 'images/game/slotImg-' + randWinImage + '.jpg';
+                winImgHolder.classList.add('active');
+            }
+        }
+    }
+}
 
 // Game Variables
 var win, prizeDesc;
@@ -86,6 +110,7 @@ function loadGame() {
     
     win = results.result;
     prizeDesc = results.prize;
+    getWinImg();
 
     if (win) { logToConsole("Game Win: img" + winImg); };
 
