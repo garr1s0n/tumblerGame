@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tumbler Game JS to CSS Update</title>
+        <meta name="description" content="Slot Machine Game CSS Update">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/milligram.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <!-- Begin App -->
+        <main class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <section class="pregame container">
+                            <div class="row">
+                                <div class="column center">
+                                    <h1>Tumbler Game JS to CSS Update</h1>
+                                    <h3>Setup The Game</h3>
+                                    <p>Set some options before the game starts</p>
+                                    <form id="gameSetup" name="gameSetup" action="javascript:void(0);">
+                                        <fieldset>
+                                            <label for="name">Name:</label>
+                                            <input type="text" id="name" name="name" placeholder="Your Name Here" />
+                                            <label>Result:</label>
+                                            <div class="row">
+                                                <div class="column">
+                                                    <label for="winOpt" class="wlLabel">
+                                                        <input type="radio" name="result" id="winOpt" value="win">
+                                                        <span>Win</span>
+                                                    </label>
+                                                </div>
+                                                <div class="column">
+                                                    <label for="loseOpt" class="wlLabel">
+                                                        <input type="radio" name="result" id="loseOpt" value="lose">
+                                                        <span>Lose</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div id="prizeHolder" class="prizeHolder">
+                                                <label for="prize">Prize:</label>
+                                                <select name="prize" id="prize">
+                                                    <option value="">Select a Prize:</option>
+                                                    <option value="prize1">Prize Number One</option>
+                                                    <option value="prize2">Prize Number Two</option>
+                                                    <option value="prize3">Prize Number Three</option>
+                                                    <option value="prize4">Prize Number Four</option>
+                                                </select>
+                                            </div>
+                                            <input class="button" type="submit" value="Start Game" />
+                                            <input class="button button-outline float-right" type="reset" value="Clear Form">
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <section class="game container">
+                            <div class="row">
+                                <div class="column">
+                                    <div class="gameArea" id="gameArea">
+                                        <div id="slotDialogue">
+                                            <h2 class="primaryLang primary">Spin to Play!</h2>
+                                            <p class="primaryLang">Click the button to spin the reels below, if it stops on three of the same image, you win!</p>
+                                            <div id="spinbtn">
+                                                <a href="javascript:void(0);" class="button gameContinueBtn" id="gameSpinBtn">Play Now</a>
+                                            </div>
+                                        </div>
+                                        <div id="slotArea" class="hide">
+                                            <div id="gTop"></div>
+                                            <div id="slotmachine">
+                                                <div id="colA" class="gameColumn"><div class="colSlider"></div></div>
+                                                <div id="colB" class="gameColumn"><div class="colSlider"></div></div>
+                                                <div id="colC" class="gameColumn"><div class="colSlider"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- End App -->
+
+        <!-- JS Down Here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/vendor/easing.min.js"></script>
+        <script src="js/vendor/jquery.imagesloaded.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

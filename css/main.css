@@ -1,0 +1,383 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    color: #222;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+ 
+.clearAll { clear: both; }
+.clearfix:before, .clearfix:after, contentArea:before, .contentArea:after { content: ""; display: table; }
+.clearfix:after, .contentArea:after { clear: both; }
+.clearfix, .contentArea { *zoom: 1; }
+.hide { display: none; }
+.margintop10 { margin-top: 10px; }
+.paragraph { line-height: 1.5em; }
+.ui-dialog { font-size: 10pt; z-index: 9999 !important; }
+#recaptchaHolder { width: 300px; margin: 1em auto; }
+.img-responsive { width: 100%; height: auto; }
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.csstransitions a, .csstransitions a:before, .csstransitions a:after { -webkit-transition:all .35s ease-in; -moz-transition:all .35s ease-in; transition: all .35s ease-in; }
+
+
+textarea {
+    resize: vertical;
+}
+.wrapper {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.wrapper>.container {
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem
+}
+
+.wrapper .row { 
+    align-items: center;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.prizeHolder {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .35s ease-in;
+}
+    .prizeHolder.active {
+        max-height: 9rem;
+    }
+
+.game.container .row .column {
+    padding: 0;
+}
+
+/* Game */
+#gameArea { position: relative; width: 640px; height: 410px; margin: 0 auto; }
+#dialog { position: absolute; z-index: 1000; background: #fff; padding: 1em; width: 20em; left: 50%; margin-left: -10em; }
+#slotmachine { width: 84.375%; height: 87.805%; overflow: hidden; padding: 0; position: absolute; top: 6.1%; left: 7.8125%; }
+#slotArea { position: absolute; top: 0; left: 0; right: 0; height: 100%; }
+#gTop { width: 100%; height: 100%; background: url(../images/game/slotOver.png) top center no-repeat; background-size: contain; z-index: 5; position: absolute; top: 0; left: 0; }
+#slotmachine .gameColumn {width: 33.3333333%; padding: 0; margin: 0; display: block; float: left; background: #fff; position: relative; }
+    #slotmachine .gameSlider { display: block; }
+    #slotmachine .gameColumn { -webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0); -webkit-transition: -webkit-transform .35s cubic-bezier(0.47, 0, 0.745, 0.715);transition: -webkit-transform .35s cubic-bezier(0.47, 0, 0.745, 0.715);-o-transition: transform .35s cubic-bezier(0.47, 0, 0.745, 0.715);transition: transform .35s cubic-bezier(0.47, 0, 0.745, 0.715);transition: transform .35s cubic-bezier(0.47, 0, 0.745, 0.715), -webkit-transform .35s cubic-bezier(0.47, 0, 0.745, 0.715); }
+    #slotmachine .gameColumn img { display: block; height: auto; width: 100%; padding: 1.666666667%; } 
+        #slotmachine.gameSet .gameColumn#colA { -webkit-transition: -webkit-transform 5s cubic-bezier(0.075, 0.82, 0.165, 1);transition: -webkit-transform 5s cubic-bezier(0.075, 0.82, 0.165, 1);-o-transition: transform 5s cubic-bezier(0.075, 0.82, 0.165, 1);transition: transform 5s cubic-bezier(0.075, 0.82, 0.165, 1);transition: transform 5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        #slotmachine.gameSet .gameColumn#colB { -webkit-transition: -webkit-transform 4.65s cubic-bezier(0.075, 0.82, 0.165, 1);transition: -webkit-transform 4.65s cubic-bezier(0.075, 0.82, 0.165, 1);-o-transition: transform 4.65s cubic-bezier(0.075, 0.82, 0.165, 1);transition: transform 4.65s cubic-bezier(0.075, 0.82, 0.165, 1);transition: transform 4.65s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 4.65s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        #slotmachine.gameSet .gameColumn#colC { -webkit-transition: -webkit-transform 4.3s cubic-bezier(0.075, 0.82, 0.165, 1);transition: -webkit-transform 4.3s cubic-bezier(0.075, 0.82, 0.165, 1);-o-transition: transform 4.3s cubic-bezier(0.075, 0.82, 0.165, 1);transition: transform 4.3s cubic-bezier(0.075, 0.82, 0.165, 1);transition: transform 4.3s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 4.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+#slotDialogue { width: 320px; background: #fff; position: absolute; z-index: 900; left: 50%; top: 3em; padding: 5%; color: #363636; display: none; margin-left: -165px; } 
+.boxshadow #slotDialogue { -webkit-box-shadow: 0 0 15px #5F5F5F; -moz-box-shadow: 0 0 15px #5F5F5F; box-shadow: 0 0 15px #5F5F5F; }
+    #spinbtn { margin: 1em auto; }
+.postGame { text-align: center; }
+    .postGame h2 { font-size: 1.75em; margin: 0; }
+    .postGame h2 + p { font-size: 1.125em; margin: .5em auto 1em; line-height: 1.35; }
+
+/* Overlay + Modal */
+#overlay, #overlayRules, .ui-widget-overlay { display: none; position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: #999; opacity: .5; z-index: 100; background:rgba(0,0,0,0.5); opacity:1; }
+#modal, #modalRules, #modalError {position:absolute; padding:1em; background:#fff; z-index: 1000; -webkit-box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.45); -moz-box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.45); box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.45); }
+	#modalContents {height:auto; overflow-y:scroll; word-wrap:break-word; }
+		#modalContents > div {width:98%; }
+#closeX, #closeXRules {display:block; width:1.25em; height:1.25em; line-height: 1.25em; text-align: center; font-size: 1em; color: #000; text-decoration: none; position:absolute; top: 0; right: 0; }
+    #closeX:hover, #closeXRules:hover { color: #bb1e27; }
+
+@media screen and (max-width: 70em) {
+
+    .gameTextContent { font-size: .875em; }
+    #slotDialogue { top: 2em; }
+
+}
+
+@media screen and (max-width: 48em) {
+
+    #gameArea { width: 90.396%; height: 0; padding-top: 57.91%; }
+}
+
+/* I know, I know... */
+@media screen and (max-width: 43.75em) {
+
+    #gameArea { width: 100%; padding-top: 64.0625%; }
+}
+
+@media screen and (max-width: 40em) {
+
+    .container {
+        padding: 0 1rem;
+    }
+    .wrapper>.container {
+        padding: 1em .5em;
+    }
+
+    /* Slot Machine */
+    #dialog { top: 5%; }
+    #slotDialogue {
+        top: 1rem;
+        font-size: 1.125rem;
+    }
+    
+
+}
+
+@media screen and (max-width: 30em) {
+	/* Slot Machine */
+    #dialog { font-size: .9em; }
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
